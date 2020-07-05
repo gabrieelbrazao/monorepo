@@ -1,10 +1,7 @@
 import express from "express";
-import { TesteController } from "@controllers/teste";
 
 const app = express();
 
-app.get("/", (request, response) =>
-  response.json(new TesteController().teste())
-);
+app.get("/", (request, response) => response.json({ Hello: "World" }));
 
 app.listen(3333);
